@@ -58,8 +58,17 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      PORT: ${APP_PORT}
+      APP_PORT: ${APP_PORT}
       NODE_ENV: production
+      # WB API
+      WB_API_TOKEN: ${WB_API_TOKEN}
+      WB_API_URL: ${WB_API_URL}
+      # Scheduler
+      FETCH_INTERVAL_MINUTES: ${FETCH_INTERVAL_MINUTES}
+      # Google Sheets (optional)
+      GOOGLE_CLIENT_EMAIL: ${GOOGLE_CLIENT_EMAIL}
+      GOOGLE_PRIVATE_KEY: ${GOOGLE_PRIVATE_KEY}
+      GOOGLE_SHEET_TITLE: ${GOOGLE_SHEET_TITLE}
 
     ports:
       - ${APP_PORT}:${APP_PORT}
